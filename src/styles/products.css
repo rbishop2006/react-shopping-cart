@@ -1,0 +1,94 @@
+.wrapper {
+}
+.orderSelect {
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  justify-content: space-between;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  width: 1000px;
+}
+.centerGridItems {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
+  border: 1px solid transparent;
+}
+.centerGridItems:hover {
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+.centerGridItems:hover > button.addToCart {
+  background-color: goldenrod;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.smallBorder {
+  border: 1px solid goldenrod;
+  width: 20px;
+  justify-self: center;
+}
+.free {
+  background-color: black;
+  color: white;
+  margin: 0;
+  width: 70px;
+  font-size: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  justify-self: end;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.costs {
+  display: none;
+}
+.productImgs {
+  width: 250px;
+  margin-top: 25px;
+}
+.pricing {
+  margin-bottom: 0;
+}
+.installments {
+  color: darkgray;
+  margin-top: 0;
+}
+.addToCart {
+  height: 55px;
+  width: 225px;
+  background-color: black;
+  color: white;
+  border: none;
+  justify-self: center;
+  margin-bottom: 10px;
+}
+.cartItems {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cartIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+}
+.cartInfo {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  width: 500px;
+}
