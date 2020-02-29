@@ -71,24 +71,24 @@
   margin-bottom: 10px;
 }
 .cartItems {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.cartIcon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  background-color: black;
-}
-.cartInfo {
   position: fixed;
   top: 0px;
   right: 0px;
+  bottom: 0px;
   width: 500px;
-  height: 500px;
   background-color: black;
-  width: 500px;
+  color: white;
+  width: 450px;
+}
+.cartItems::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 450px;
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0px;
 }

@@ -17,10 +17,9 @@
       "currencyFormat": "$",
       "isFreeShipping": true
     },
-
     {
       "id": 13,
-      "sku": 51498472915966366,
+      "sku": 51498472915966370,
       "imgs": {
         "normal": "/assets/51498472915966370_1.jpg",
         "thumb": "/assets/51498472915966370_2.jpg"
@@ -35,10 +34,9 @@
       "currencyFormat": "$",
       "isFreeShipping": true
     },
-
     {
       "id": 14,
-      "sku": 10686354557628303,
+      "sku": 10686354557628304,
       "imgs": {
         "normal": "/assets/10686354557628304_1.jpg",
         "thumb": "/assets/10686354557628304_2.jpg"
@@ -47,16 +45,15 @@
       "description": "GPX Poly 1",
       "availableSizes": ["X", "L", "XL"],
       "style": "Front tie dye print",
-      "price": 9.0,
+      "price": 9,
       "installments": 3,
       "currencyId": "USD",
       "currencyFormat": "$",
       "isFreeShipping": true
     },
-
     {
       "id": 15,
-      "sku": 11033926921508487,
+      "sku": 11033926921508488,
       "imgs": {
         "normal": "/assets/11033926921508488_1.jpg",
         "thumb": "/assets/11033926921508488_2.jpg"
@@ -65,16 +62,15 @@
       "description": "Treino 2014",
       "availableSizes": ["X", "L", "XL", "XXL"],
       "style": "Black T-Shirt with front print",
-      "price": 14.0,
+      "price": 14,
       "installments": 5,
       "currencyId": "USD",
       "currencyFormat": "$",
       "isFreeShipping": true
     },
-
     {
       "id": 11,
-      "sku": 39876704341265606,
+      "sku": 39876704341265610,
       "imgs": {
         "normal": "/assets/39876704341265610_1.jpg",
         "thumb": "/assets/39876704341265610_2.jpg"
@@ -89,10 +85,9 @@
       "currencyFormat": "$",
       "isFreeShipping": true
     },
-
     {
       "id": 16,
-      "sku": 10412368723880253,
+      "sku": 10412368723880252,
       "imgs": {
         "normal": "/assets/10412368723880252_1.jpg",
         "thumb": "/assets/10412368723880252_2.jpg"
@@ -101,13 +96,12 @@
       "description": "",
       "availableSizes": ["XS", "X", "L", "ML", "XL"],
       "style": "Grey",
-      "price": 75.0,
+      "price": 75,
       "installments": 5,
       "currencyId": "USD",
       "currencyFormat": "$",
       "isFreeShipping": true
     },
-
     {
       "id": 0,
       "sku": 8552515751438644,
@@ -125,10 +119,9 @@
       "currencyFormat": "$",
       "isFreeShipping": true
     },
-
     {
       "id": 1,
-      "sku": 18644119330491312,
+      "sku": 18644119330491310,
       "imgs": {
         "normal": "/assets/18644119330491310_1.jpg",
         "thumb": "/assets/18644119330491310_2.jpg"
@@ -143,7 +136,6 @@
       "currencyFormat": "$",
       "isFreeShipping": true
     },
-
     {
       "id": 2,
       "sku": 11854078013954528,
@@ -161,7 +153,6 @@
       "currencyFormat": "$",
       "isFreeShipping": true
     },
-
     {
       "id": 3,
       "sku": 876661122392077,
@@ -179,10 +170,9 @@
       "currencyFormat": "$",
       "isFreeShipping": true
     },
-
     {
       "id": 4,
-      "sku": 9197907543445677,
+      "sku": 9197907543445676,
       "imgs": {
         "normal": "/assets/9197907543445676_1.jpg",
         "thumb": "/assets/9197907543445676_2.jpg"
@@ -197,7 +187,6 @@
       "currencyFormat": "$",
       "isFreeShipping": false
     },
-
     {
       "id": 5,
       "sku": 10547961582846888,
@@ -215,7 +204,6 @@
       "currencyFormat": "$",
       "isFreeShipping": false
     },
-
     {
       "id": 6,
       "sku": 6090484789343891,
@@ -233,10 +221,9 @@
       "currencyFormat": "$",
       "isFreeShipping": true
     },
-
     {
       "id": 7,
-      "sku": 18532669286405342,
+      "sku": 18532669286405344,
       "imgs": {
         "normal": "/assets/18532669286405344_1.jpg",
         "thumb": "/assets/18532669286405344_2.jpg"
@@ -251,7 +238,6 @@
       "currencyFormat": "$",
       "isFreeShipping": true
     },
-
     {
       "id": 8,
       "sku": 5619496040738316,
@@ -269,10 +255,9 @@
       "currencyFormat": "$",
       "isFreeShipping": false
     },
-
     {
       "id": 9,
-      "sku": 11600983276356165,
+      "sku": 11600983276356164,
       "imgs": {
         "normal": "/assets/11600983276356164_1.jpg",
         "thumb": "/assets/11600983276356164_2.jpg"
@@ -287,10 +272,9 @@
       "currencyFormat": "$",
       "isFreeShipping": true
     },
-
     {
       "id": 10,
-      "sku": 27250082398145995,
+      "sku": 27250082398145996,
       "imgs": {
         "normal": "/assets/27250082398145996_1.jpg",
         "thumb": "/assets/27250082398145996_2.jpg"
@@ -299,12 +283,11 @@
       "description": "",
       "availableSizes": ["L", "XL"],
       "style": "",
-      "price": 49.0,
+      "price": 49,
       "installments": 9,
       "currencyId": "USD",
       "currencyFormat": "$",
       "isFreeShipping": true
     }
-  ],
-  "cart": []
+  ]
 }

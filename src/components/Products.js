@@ -1,16 +1,18 @@
 import React from "react"
-import { useProducts } from "../hooks"
+import { useProducts, useCart } from "../hooks"
 import "../styles/products.css"
+import { TiShoppingCart } from "react-icons/ti"
 
 export default props => {
   const { products, count } = useProducts()
+  const { cart, add, del } = useCart()
 
   return (
     <div className="wrapper">
       <div className="orderSelect">
         <p>{count} Product(s) found.</p>
         <div>
-          <label for="orderBy">Order by </label>
+          <label htmlFor="orderBy">Order by </label>
 
           <select id="orderBy">
             <option value="select">Select</option>
@@ -21,7 +23,11 @@ export default props => {
       </div>
       <div className="grid">
         {products.map(product => (
-          <div className="centerGridItems" key={"product" + product.id}>
+          <div
+            className="centerGridItems"
+            onClick={e => add(product)}
+            key={"product" + product.id}
+          >
             <p className={product.isFreeShipping ? "free" : "costs"}>
               Free Shipping
             </p>
@@ -42,9 +48,21 @@ export default props => {
           </div>
         ))}
       </div>
+
       <div className="cartItems">
-        <p className="cartIcon">Cart</p>
-        <h1 className="cartInfo">Hello cart</h1>
+        {cart.map(item => (
+          <div onClick={e => del(cart.id)} className="" key={"item" + item.id}>
+            <img
+              className=""
+              key={"product" + item.id}
+              src={item.imgs.thumb}
+              alt="mens shirts"
+            />
+            <p>{item.title}</p>
+
+            <p className="">${item.price.toFixed(2)}</p>
+          </div>
+        ))}
       </div>
     </div>
   )
