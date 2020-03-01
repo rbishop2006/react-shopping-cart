@@ -70,25 +70,80 @@
   justify-self: center;
   margin-bottom: 10px;
 }
-.cartItems {
+.cart {
   position: fixed;
   top: 0px;
   right: 0px;
   bottom: 0px;
   width: 500px;
-  background-color: black;
+  background-color: rgb(25, 25, 29);
   color: white;
   width: 450px;
 }
-.cartItems::before {
+.cartItems {
+  display: grid;
+  grid-template-columns: 70px auto 70px;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid white;
+}
+.cart::before {
   content: "";
   position: absolute;
   top: 0px;
   right: 450px;
   width: 60px;
   height: 60px;
-  background-color: black;
+  background-color: rgb(25, 25, 29);
   color: white;
   border: none;
   padding: 0px;
+}
+
+.thumbs {
+  width: 60px;
+}
+.itemTitle {
+  font-size: 12px;
+  margin: 0;
+}
+.itemStyle {
+  font-size: 12px;
+  margin: 0;
+  color: gray;
+}
+.quantityCount {
+  font-size: 12px;
+  margin: 0;
+  color: gray;
+}
+.delButton {
+  background-color: rgb(25, 25, 29);
+  color: gray;
+  outline: none;
+  border: none;
+}
+.itemPrice {
+  color: goldenrod;
+  font-size: 12px;
+  margin: 0;
+}
+.lessQuantity {
+  background-color: rgb(25, 25, 29);
+  color: gray;
+  outline: none;
+  border: none;
+}
+.moreQuantity {
+  background-color: rgb(25, 25, 29);
+  color: gray;
+  outline: none;
+  border: none;
+}
+.itemTotals {
+  text-align: right;
+}
+.quantitiesButtons {
+  display: flex;
+  justify-content: flex-end;
 }

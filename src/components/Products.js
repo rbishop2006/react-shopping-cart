@@ -49,18 +49,40 @@ export default props => {
         ))}
       </div>
 
-      <div className="cartItems">
+      <div className="cart">
         {cart.map(item => (
-          <div onClick={e => del(cart.id)} className="" key={"item" + item.id}>
-            <img
-              className=""
-              key={"product" + item.id}
-              src={item.imgs.thumb}
-              alt="mens shirts"
-            />
-            <p>{item.title}</p>
-
-            <p className="">${item.price.toFixed(2)}</p>
+          <div className="cartItems" key={"item" + item.id}>
+            <div>
+              <img
+                className="thumbs"
+                key={"item" + item.id}
+                src={item.imgs.thumb}
+                alt="mens shirts"
+              />
+            </div>
+            <div className="itemInfo">
+              <p className="itemTitle">{item.title}</p>
+              <p className="itemStyle">{item.style}</p>
+              <p className="quantityCount">Quantity:</p>
+            </div>
+            <div className="itemTotals">
+              <button
+                type="button"
+                className="delButton"
+                onClick={e => del(item.id)}
+              >
+                x
+              </button>
+              <p className="itemPrice">${item.price.toFixed(2)}</p>
+              <div className="quantitiesButtons">
+                <button className="lessQuantity" type="button">
+                  -
+                </button>
+                <button className="moreQuantity" type="button">
+                  +
+                </button>
+              </div>
+            </div>
           </div>
         ))}
       </div>

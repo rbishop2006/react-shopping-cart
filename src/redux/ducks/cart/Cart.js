@@ -18,12 +18,8 @@ export default (state = initialState, action) => {
       return { ...state, cart: [...state.cart, action.payload] }
     case DEL_CART:
       return {
-        cart: state.cart.filter(item => item.id === action.id)
+        cart: state.cart.filter(item => item.id !== action.payload)
       }
-
-    // return state.filter(...state.cart, item => item != action.payload)
-
-    // return { ...state.filter((item, index) => index != action.index) }
 
     default:
       return state
@@ -38,10 +34,10 @@ function addCart(product) {
   }
 }
 
-function delCart(product) {
+function delCart(productId) {
   return {
     type: DEL_CART,
-    payload: product
+    payload: productId
   }
 }
 
@@ -51,7 +47,7 @@ export function useCart() {
   const dispatch = useDispatch()
   const cart = useSelector(appState => appState.cartState.cart)
   const add = product => dispatch(addCart(product))
-  const del = product => dispatch(delCart(product))
+  const del = item => dispatch(delCart(item))
 
   useEffect(() => {}, [dispatch])
   return { add, cart, del }
