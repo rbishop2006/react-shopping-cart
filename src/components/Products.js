@@ -6,10 +6,10 @@ import { TiShoppingCart } from "react-icons/ti"
 
 export default props => {
   const { products, count } = useProducts()
-  const { cart, add, del } = useCart()
+  const { cart, add, del, delAllItems } = useCart()
   const [show, setShow] = useState(false)
   const total = cart.reduce((a, b) => {
-    return a + b.price
+    return a + b.price * b.quantity
   }, 0)
 
   return (
@@ -82,22 +82,30 @@ export default props => {
               <div className="itemInfo">
                 <p className="itemTitle">{item.title}</p>
                 <p className="itemStyle">{item.style}</p>
-                <p className="quantityCount">Quantity:</p>
+                <p className="quantityCount">Quantity: {item.quantity}</p>
               </div>
               <div className="itemTotals">
                 <button
                   type="button"
                   className="delButton"
-                  onClick={e => del(item.id)}
+                  onClick={e => delAllItems(item.id)}
                 >
                   x
                 </button>
                 <p className="itemPrice">${item.price.toFixed(2)}</p>
                 <div className="quantitiesButtons">
-                  <button className="lessQuantity" type="button">
+                  <button
+                    onClick={e => del(item.id)}
+                    className="lessQuantity"
+                    type="button"
+                  >
                     -
                   </button>
-                  <button className="moreQuantity" type="button">
+                  <button
+                    onClick={e => add(item)}
+                    className="moreQuantity"
+                    type="button"
+                  >
                     +
                   </button>
                 </div>
@@ -112,14 +120,16 @@ export default props => {
               <p className="grandSubTotal">${total.toFixed(2)}</p>
             </div>
           </div>
-          <Link
-            className="linkToCheckout"
-            to={{ pathname: "/checkout", data: cart }}
-          >
-            <div className="checkoutButton">
-              <button className="checkoutButtonButton">Checkout</button>
-            </div>
-          </Link>
+          <div className="">
+            <Link
+              className="linkToCheckout"
+              to={{ pathname: "/checkout", data: cart }}
+            >
+              <div className="checkoutButton">
+                <button className="checkoutButtonButton">Checkout</button>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

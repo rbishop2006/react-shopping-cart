@@ -262,3 +262,61 @@
   color: goldenrod;
   padding-bottom: 30px;
 }
+.shopOrConfirm {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* styling for receipt */
+
+.receiptWrapper {
+  margin: 30px auto;
+  width: 600px;
+  border: 1px solid black;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.receiptThankYou {
+  text-align: center;
+}
+.receiptItem {
+  display: grid;
+  grid-template-columns: auto 70px;
+}
+
+.receiptItemDesc {
+  border-bottom: 1px dashed black;
+}
+.receiptQuantity {
+  font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.receiptStyle {
+  font-size: 12px;
+  margin: 0;
+}
+.receiptFooter {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.contShopping {
+  background-color: black;
+  color: white;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.confirmOrder {
+  background-color: black;
+  color: white;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
