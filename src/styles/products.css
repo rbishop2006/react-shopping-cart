@@ -216,3 +216,49 @@
   display: flex;
   justify-content: flex-end;
 }
+.checkoutWrapper {
+  margin: 30px auto;
+  width: 600px;
+
+  background-color: rgb(25, 25, 29);
+}
+.checkOutHeader {
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid black;
+
+  color: white;
+}
+.checkOutItems {
+  display: grid;
+  grid-template-columns: auto 60px;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 3px solid black;
+}
+.checkOutItemTitle {
+  color: white;
+}
+.checkOutItemStyle {
+  color: gray;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.checkOutItemQuantity {
+  color: gray;
+  margin: 0;
+  font-size: 12px;
+}
+.checkOutPrice {
+  color: goldenrod;
+}
+.checkOutFooter {
+  text-align: center;
+  color: white;
+}
+.checkOutFooterPrice {
+  color: goldenrod;
+  padding-bottom: 30px;
+}
