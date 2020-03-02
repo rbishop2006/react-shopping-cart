@@ -1,4 +1,6 @@
 .wrapper {
+  margin: auto;
+  width: 1200px;
 }
 .orderSelect {
   display: flex;
@@ -75,29 +77,89 @@
   top: 0px;
   right: 0px;
   bottom: 0px;
-  width: 500px;
   background-color: rgb(25, 25, 29);
   color: white;
   width: 450px;
+  transition: width 0.5s;
+}
+.unseen {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgb(25, 25, 29);
+  color: white;
+  width: 0px;
+  transition: width 0.5s;
 }
 .cartItems {
   display: grid;
   grid-template-columns: 70px auto 70px;
   align-items: center;
   padding: 15px;
-  border: 1px solid white;
+  border-bottom: 3px solid black;
 }
-.cart::before {
-  content: "";
+.cartButton {
   position: absolute;
   top: 0px;
-  right: 450px;
+  bottom: 0px;
+  left: -60px;
   width: 60px;
   height: 60px;
   background-color: rgb(25, 25, 29);
   color: white;
   border: none;
   padding: 0px;
+  cursor: pointer;
+  outline: none;
+}
+.cartHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  font-size: 20px;
+  border-bottom: 3px solid black;
+}
+.cartAllItems {
+  overflow: scroll;
+  max-height: 67%;
+}
+.cartFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  color: darkgray;
+}
+.absoluteFooter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgb(25, 25, 29);
+  margin-bottom: 20px;
+}
+
+.grandSubTotal {
+  color: goldenrod;
+}
+.checkoutButton {
+  display: flex;
+  justify-content: center;
+}
+.checkoutButtonButton {
+  width: 95%;
+  height: 35px;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  padding: 0;
+  outline: none;
+  background-color: black;
+  cursor: pointer;
+}
+.linkToCheckout {
+  text-decoration: none;
 }
 
 .thumbs {
@@ -119,23 +181,30 @@
 }
 .delButton {
   background-color: rgb(25, 25, 29);
-  color: gray;
+  color: black;
   outline: none;
   border: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 900;
 }
 .itemPrice {
   color: goldenrod;
   font-size: 12px;
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
+
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 .lessQuantity {
-  background-color: rgb(25, 25, 29);
+  background-color: black;
   color: gray;
   outline: none;
   border: none;
 }
 .moreQuantity {
-  background-color: rgb(25, 25, 29);
+  background-color: black;
   color: gray;
   outline: none;
   border: none;

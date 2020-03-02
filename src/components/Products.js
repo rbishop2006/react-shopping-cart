@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState } from "react"
+import { Link } from "react-router-dom"
 import { useProducts, useCart } from "../hooks"
 import "../styles/products.css"
 import { TiShoppingCart } from "react-icons/ti"
@@ -6,6 +7,10 @@ import { TiShoppingCart } from "react-icons/ti"
 export default props => {
   const { products, count } = useProducts()
   const { cart, add, del } = useCart()
+  const [show, setShow] = useState(false)
+  const total = cart.reduce((a, b) => {
+    return a + b.price
+  }, 0)
 
   return (
     <div className="wrapper">
@@ -49,42 +54,73 @@ export default props => {
         ))}
       </div>
 
-      <div className="cart">
-        {cart.map(item => (
-          <div className="cartItems" key={"item" + item.id}>
-            <div>
-              <img
-                className="thumbs"
-                key={"item" + item.id}
-                src={item.imgs.thumb}
-                alt="mens shirts"
-              />
-            </div>
-            <div className="itemInfo">
-              <p className="itemTitle">{item.title}</p>
-              <p className="itemStyle">{item.style}</p>
-              <p className="quantityCount">Quantity:</p>
-            </div>
-            <div className="itemTotals">
-              <button
-                type="button"
-                className="delButton"
-                onClick={e => del(item.id)}
-              >
-                x
-              </button>
-              <p className="itemPrice">${item.price.toFixed(2)}</p>
-              <div className="quantitiesButtons">
-                <button className="lessQuantity" type="button">
-                  -
+      <div className={show ? "cart" : "unseen"}>
+        <button
+          className="cartButton"
+          onClick={e => (!show ? setShow(true) : setShow(false))}
+        >
+          <TiShoppingCart />
+        </button>
+        <div className="cartHeader">
+          <p>
+            {" "}
+            <TiShoppingCart />
+          </p>
+          <p>Cart</p>
+        </div>
+        <div className="cartAllItems">
+          {cart.map(item => (
+            <div className="cartItems" key={"item" + item.id}>
+              <div>
+                <img
+                  className="thumbs"
+                  key={"item" + item.id}
+                  src={item.imgs.thumb}
+                  alt="mens shirts"
+                />
+              </div>
+              <div className="itemInfo">
+                <p className="itemTitle">{item.title}</p>
+                <p className="itemStyle">{item.style}</p>
+                <p className="quantityCount">Quantity:</p>
+              </div>
+              <div className="itemTotals">
+                <button
+                  type="button"
+                  className="delButton"
+                  onClick={e => del(item.id)}
+                >
+                  x
                 </button>
-                <button className="moreQuantity" type="button">
-                  +
-                </button>
+                <p className="itemPrice">${item.price.toFixed(2)}</p>
+                <div className="quantitiesButtons">
+                  <button className="lessQuantity" type="button">
+                    -
+                  </button>
+                  <button className="moreQuantity" type="button">
+                    +
+                  </button>
+                </div>
               </div>
             </div>
+          ))}
+        </div>
+        <div className="absoluteFooter">
+          <div className="cartFooter">
+            <p>SUBTOTAL</p>
+            <div>
+              <p className="grandSubTotal">${total.toFixed(2)}</p>
+            </div>
           </div>
-        ))}
+          <Link
+            className="linkToCheckout"
+            to={{ pathname: "/checkout", data: cart }}
+          >
+            <div className="checkoutButton">
+              <button className="checkoutButtonButton">Checkout</button>
+            </div>
+          </Link>
+        </div>
       </div>
     </div>
   )
