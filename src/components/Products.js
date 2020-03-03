@@ -55,10 +55,7 @@ export default props => {
       </div>
 
       <div className={show ? "cart" : "unseen"}>
-        <button
-          className="cartButton"
-          onClick={e => (!show ? setShow(true) : setShow(false))}
-        >
+        <button className="cartButton" onClick={e => setShow(!show)}>
           <TiShoppingCart />
         </button>
         <div className="cartHeader">
