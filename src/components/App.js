@@ -5,7 +5,7 @@ import Products from "./Products.js"
 import Checkout from "./Checkout.js"
 import Receipt from "./receipt.js"
 
-export default props => {
+export default (props) => {
   return (
     <div>
       <Route exact path="/" component={Products}></Route>
@@ -14,3 +14,5 @@ export default props => {
     </div>
   )
 }
+
+// adding comments for build
