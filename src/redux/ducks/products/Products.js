@@ -10,7 +10,7 @@ const SET_COUNT = "products/SET_COUNT"
 // 3. initial state
 const initialState = {
   products: [],
-  count: 0
+  count: 0,
 }
 
 // 4. reducer
@@ -28,25 +28,30 @@ export default (state = initialState, action) => {
 
 // 5. action creators
 function getProducts() {
-  return dispatch => {
-    axios.get("/products").then(resp => {
-      dispatch(getCount())
-      dispatch({
-        type: GET_PRODUCTS,
-        payload: resp.data
+  return (dispatch) => {
+    axios
+      .get("https://api.jsonbin.io/b/5ee152d62f5fd957fda7bd12")
+      .then((resp) => {
+        console.log(resp.data)
+        dispatch(getCount())
+        dispatch({
+          type: GET_PRODUCTS,
+          payload: resp.data.products,
+        })
       })
-    })
   }
 }
 
 function getCount() {
-  return dispatch => {
-    axios.get("/products").then(resp => {
-      dispatch({
-        type: SET_COUNT,
-        payload: resp.data.length
+  return (dispatch) => {
+    axios
+      .get("https://api.jsonbin.io/b/5ee152d62f5fd957fda7bd12")
+      .then((resp) => {
+        dispatch({
+          type: SET_COUNT,
+          payload: resp.data.products.length,
+        })
       })
-    })
   }
 }
 
@@ -54,8 +59,8 @@ function getCount() {
 
 export function useProducts() {
   const dispatch = useDispatch()
-  const products = useSelector(appState => appState.productState.products)
-  const count = useSelector(appState => appState.productState.count)
+  const products = useSelector((appState) => appState.productState.products)
+  const count = useSelector((appState) => appState.productState.count)
 
   useEffect(() => {
     dispatch(getProducts())
