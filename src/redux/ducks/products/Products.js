@@ -30,7 +30,7 @@ export default (state = initialState, action) => {
 function getProducts() {
   return (dispatch) => {
     axios
-      .get("https://api.jsonbin.io/b/5ee152d62f5fd957fda7bd12")
+      .get("https://api.jsonbin.io/b/5ee152d62f5fd957fda7bd12/1")
       .then((resp) => {
         console.log(resp.data)
         dispatch(getCount())
@@ -45,7 +45,7 @@ function getProducts() {
 function getCount() {
   return (dispatch) => {
     axios
-      .get("https://api.jsonbin.io/b/5ee152d62f5fd957fda7bd12")
+      .get("https://api.jsonbin.io/b/5ee152d62f5fd957fda7bd12/1")
       .then((resp) => {
         dispatch({
           type: SET_COUNT,
